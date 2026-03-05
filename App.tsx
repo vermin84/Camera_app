@@ -1,9 +1,18 @@
-import { Text, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import CameraScreen from "./screens/CameraScreen";
+import GalleryScreen from "./screens/GalleryScreen";
+const Stack = createNativeStackNavigator();
+
+
+
 
 export default function App() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Start project </Text>
-    </View>
-  );
+  return <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Camera" component={CameraScreen} />
+        <Stack.Screen name="Gallery" component={GalleryScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+
 }
