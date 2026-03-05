@@ -1,8 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Suspense } from "react";
-import CameraScreen from "./screens/CameraScreen";
-import GalleryScreen from "./screens/GalleryScreen";
+import CameraScreen from "./src/screens/CameraScreen";
+import GalleryScreen from "./src/screens/GalleryScreen";
 const Stack = createNativeStackNavigator();
 
 
@@ -10,7 +9,7 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return <NavigationContainer>
-    <Suspense/>
+    
       <Stack.Navigator >
         <Stack.Screen name="Camera" component={CameraScreen} />
         <Stack.Screen name="Gallery" component={GalleryScreen} />
